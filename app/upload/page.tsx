@@ -7,8 +7,8 @@ import { upload } from "@vercel/blob/client";
 type Stage =
   | { kind: "form" }
   | { kind: "uploading" }
-  | { kind: "indexing"; taskId: string }
-  | { kind: "evaluating"; videoId: string }
+  | { kind: "indexing"; taskId: string; videoUrl: string }
+  | { kind: "evaluating"; videoId: string; videoUrl: string }
   | { kind: "done"; playerId: string }
   | { kind: "error"; message: string };
 
@@ -31,7 +31,11 @@ export default function UploadPage() {
         const d = await r.json();
         if (d.status === "ready" && d.videoId) {
           clearInterval(id);
-          setStage({ kind: "evaluating", videoId: d.videoId });
+          setStage({
+            kind: "evaluating",
+            videoId: d.videoId,
+            videoUrl: stage.videoUrl,
+          });
         } else if (d.status === "failed") {
           clearInterval(id);
           setStage({ kind: "error", message: "Indexing failed at Twelve Labs" });
@@ -53,6 +57,7 @@ export default function UploadPage() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             videoId: stage.videoId,
+            videoUrl: stage.videoUrl,
             position,
             displayName: name || undefined,
             playerDescription: playerDescription.trim() || undefined,
@@ -82,7 +87,7 @@ export default function UploadPage() {
       });
       const d = await r.json();
       if (!r.ok) throw new Error(d.error ?? "upload failed");
-      setStage({ kind: "indexing", taskId: d.taskId });
+      setStage({ kind: "indexing", taskId: d.taskId, videoUrl: blob.url });
     } catch (e: any) {
       setStage({ kind: "error", message: e.message });
     }

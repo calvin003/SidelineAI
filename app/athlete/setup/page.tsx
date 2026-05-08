@@ -95,12 +95,13 @@ export default function AthleteSetupPage() {
         access: "public",
         handleUploadUrl: "/api/upload-token",
       });
+      const blobUrl = blob.url;
 
       // Step 2: hand the URL to our API → TwelveLabs URL ingest.
       const upRes = await fetch("/api/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ videoUrl: blob.url, filename: file.name }),
+        body: JSON.stringify({ videoUrl: blobUrl, filename: file.name }),
       });
       const upData = await upRes.json();
       if (!upRes.ok) throw new Error(upData.error ?? "upload failed");
@@ -126,6 +127,7 @@ export default function AthleteSetupPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           videoId,
+          videoUrl: blobUrl,
           position: form.position,
           displayName: `${form.first} ${form.last}`.trim(),
           playerDescription: form.playerDescription.trim() || undefined,
