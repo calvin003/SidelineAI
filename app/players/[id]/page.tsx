@@ -20,8 +20,12 @@ function starsStr(n: number) {
   return "★".repeat(n) + "☆".repeat(5 - n);
 }
 
-export default function PlayerPage({ params }: { params: { id: string } }) {
-  const p = getPlayerById(params.id);
+export default async function PlayerPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const p = await getPlayerById(params.id);
   if (!p) notFound();
 
   const name = p.display_name ?? "Athlete";

@@ -1,6 +1,11 @@
 import type { PlayerEvaluation } from "./schema";
 
-export const TL_GENERATE_PROMPT = `You are watching basketball game film. Identify EVERY meaningful basketball moment in this clip and return them as a JSON array.
+export const TL_GENERATE_PROMPT = (playerDescription?: string) => {
+  const focus = playerDescription?.trim()
+    ? `\n\nFOCUS PLAYER: ${playerDescription.trim()}\n\nYou must report ONLY moments where THIS specific player is involved (as the ball-handler, defender, screener, cutter, or rebounder). Identify him/her using the description above. If the focus player is not visible or not involved in a possession, skip it. Every moment in your output must clearly involve this player.`
+    : "";
+
+  return `You are watching basketball game film. Identify EVERY meaningful basketball moment in this clip and return them as a JSON array.${focus}
 
 For each moment include:
 - timestamp: "MM:SS" of when the action begins
@@ -19,6 +24,7 @@ Focus on:
 Be specific. "He cuts" is bad. "Backdoor cut from weakside corner after defender turns head, finishes with right-hand layup" is good.
 
 Output ONLY a JSON array of moments. No prose.`;
+};
 
 export const CLAUDE_EVAL_PROMPT = (timelineJson: string, position: string) => `You are an expert basketball scout writing a film evaluation for a high school / college prospect playing ${position}.
 

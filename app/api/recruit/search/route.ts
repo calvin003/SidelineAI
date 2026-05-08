@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     if (!query || typeof query !== "string") {
       return NextResponse.json({ error: "query required" }, { status: 400 });
     }
-    const players = getAllPlayers();
+    const players = await getAllPlayers();
     const result = await searchPlayers(query, players);
     return NextResponse.json(result);
   } catch (e: any) {

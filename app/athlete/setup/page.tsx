@@ -21,6 +21,7 @@ type FormState = {
   wingInches: string;
   hand: Hand | "";
   files: File[];
+  playerDescription: string;
 };
 
 const STEPS = [
@@ -55,6 +56,7 @@ export default function AthleteSetupPage() {
     wingInches: "",
     hand: "",
     files: [],
+    playerDescription: "",
   });
   const [submitting, setSubmitting] = useState<
     null | "uploading" | "indexing" | "evaluating" | "done" | "error"
@@ -126,6 +128,7 @@ export default function AthleteSetupPage() {
           videoId,
           position: form.position,
           displayName: `${form.first} ${form.last}`.trim(),
+          playerDescription: form.playerDescription.trim() || undefined,
         }),
       });
       const evData = await evRes.json();
@@ -701,6 +704,19 @@ function Step2({
             ))}
           </div>
         )}
+
+        <div className="mt-6">
+          <Field
+            label="Which player are you?"
+            hint="(helps the AI track you in the clip)"
+          >
+            <Input
+              value={form.playerDescription}
+              onChange={(v) => update("playerDescription", v)}
+              placeholder="e.g. 'wearing white #11', 'red jersey, ball-handler at the start'"
+            />
+          </Field>
+        </div>
       </Card>
       <NavBtns onBack={onBack} onNext={onNext} />
     </>

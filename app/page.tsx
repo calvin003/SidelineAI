@@ -4,8 +4,8 @@ import { avgScore } from "@/lib/utils";
 import { SiteFooter } from "@/components/site-footer";
 import { LandingDemo } from "@/components/landing-demo";
 
-export default function Home() {
-  const players = getAllPlayers();
+export default async function Home() {
+  const players = await getAllPlayers();
   const totalReports = players.length;
 
   return (

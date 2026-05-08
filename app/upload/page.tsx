@@ -19,6 +19,7 @@ export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);
   const [position, setPosition] = useState<string>("wing");
   const [name, setName] = useState<string>("");
+  const [playerDescription, setPlayerDescription] = useState<string>("");
   const [drag, setDrag] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -54,6 +55,7 @@ export default function UploadPage() {
             videoId: stage.videoId,
             position,
             displayName: name || undefined,
+            playerDescription: playerDescription.trim() || undefined,
           }),
         });
         const d = await r.json();
@@ -63,7 +65,7 @@ export default function UploadPage() {
         setStage({ kind: "error", message: e.message });
       }
     })();
-  }, [stage, position, name]);
+  }, [stage, position, name, playerDescription]);
 
   const submit = async () => {
     if (!file) return;
@@ -106,6 +108,8 @@ export default function UploadPage() {
             setPosition={setPosition}
             name={name}
             setName={setName}
+            playerDescription={playerDescription}
+            setPlayerDescription={setPlayerDescription}
             drag={drag}
             setDrag={setDrag}
             fileRef={fileRef}
@@ -137,6 +141,8 @@ function FormView({
   setPosition,
   name,
   setName,
+  playerDescription,
+  setPlayerDescription,
   drag,
   setDrag,
   fileRef,
@@ -251,6 +257,21 @@ function FormView({
               ))}
             </select>
           </div>
+        </div>
+
+        <div
+          className="bg-bg rounded-xl px-4 py-3"
+          style={{ border: "1px solid var(--border-h)" }}
+        >
+          <div className="text-[11px] text-ink3 mb-1 uppercase tracking-eyebrow font-semibold">
+            Which player are you? (helps the AI track you)
+          </div>
+          <input
+            value={playerDescription}
+            onChange={(e) => setPlayerDescription(e.target.value)}
+            placeholder="e.g. wearing white #11, red jersey, ball-handler at the start"
+            className="w-full bg-transparent text-[15px] text-ink outline-none placeholder:text-ink3"
+          />
         </div>
 
         <button
