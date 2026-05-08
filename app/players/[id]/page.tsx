@@ -124,12 +124,21 @@ export default async function PlayerPage({
               </span>
             </div>
           </div>
-          <button
-            className="text-xs font-medium px-3.5 py-1.5 rounded-md text-ink whitespace-nowrap bg-bg hover:bg-bg2 transition-colors"
-            style={{ border: "1px solid var(--border)" }}
-          >
-            Full report ↗
-          </button>
+          <div className="flex flex-col gap-1.5 shrink-0">
+            <button
+              type="button"
+              className="text-xs font-bold px-3.5 py-1.5 rounded-md text-white whitespace-nowrap bg-ink hover:bg-[#333] transition-colors"
+            >
+              + Add another clip
+            </button>
+            <button
+              type="button"
+              className="text-xs font-medium px-3.5 py-1.5 rounded-md text-ink whitespace-nowrap bg-bg hover:bg-bg2 transition-colors"
+              style={{ border: "1px solid var(--border)" }}
+            >
+              Full report ↗
+            </button>
+          </div>
         </div>
 
         {/* SCOUTING HEADLINE */}
