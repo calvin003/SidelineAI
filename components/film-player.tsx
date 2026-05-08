@@ -163,71 +163,14 @@ export function FilmPlayer({
             src={videoUrl}
             preload="metadata"
             playsInline
-            loop
             onClick={togglePlay}
+            onEnded={() => {
+              const v = vidRef.current;
+              if (!v) return;
+              v.currentTime = 0;
+            }}
             className="absolute inset-0 w-full h-full object-cover cursor-pointer"
           />
-
-          {/* Top-left chip */}
-          <div
-            className="absolute top-3 left-3 z-10 text-white text-[10.5px] font-medium px-[9px] py-[3px] rounded pointer-events-none"
-            style={{ background: "rgba(0,0,0,.62)", letterSpacing: "0.03em" }}
-          >
-            SCOUT FILM · Game Tape
-          </div>
-          {/* Top-right chip */}
-          <div
-            className="absolute top-3 right-3 z-10 text-white text-[10.5px] font-medium px-[9px] py-[3px] rounded pointer-events-none"
-            style={{ background: "rgba(0,0,0,.55)" }}
-          >
-            Annotated by AI
-          </div>
-
-          {/* Annotation overlay */}
-          <div className="absolute inset-0 pointer-events-none z-[2]">
-            {active && (
-              <div
-                className="absolute transition-opacity duration-300"
-                style={{
-                  left: active.box.x,
-                  top: active.box.y,
-                  width: active.box.w,
-                  height: active.box.h,
-                  borderRadius: 18,
-                  border: "2px solid rgba(255,255,255,.85)",
-                  boxShadow:
-                    "inset 0 0 0 1px rgba(0,0,0,.15), 0 4px 32px rgba(0,0,0,.25)",
-                  opacity: 1,
-                }}
-              >
-                <Corner pos="tl" label="Moment" value={active.category.replace(/_/g, " ")} />
-                <Corner pos="tr" label="Rating" value={ratingLabel(active.rating)} />
-                <Corner pos="bl" label="Time" value={active.timestamp} />
-                <Corner pos="br" label="Tags" value={active.skill_tags[0] || "—"} />
-              </div>
-            )}
-          </div>
-
-          {/* Caption ribbon at bottom of video */}
-          {active && (
-            <div
-              className="absolute bottom-3 left-3 right-3 z-[3] text-white p-3 rounded-lg pointer-events-none fade-up"
-              style={{ background: "rgba(0,0,0,.72)" }}
-            >
-              <div className="text-[10.5px] uppercase tracking-wider opacity-70 mb-1">
-                {active.category.replace(/_/g, " ")} · {active.timestamp}
-              </div>
-              <div className="text-[13px] leading-snug">
-                {active.factual_description}
-              </div>
-              <div
-                className="text-[12px] italic mt-1 opacity-85"
-                style={{ color: RATING_COLORS[active.rating] === "#1F6B3A" ? "#7CE2A4" : RATING_COLORS[active.rating] === "#C8102E" ? "#FFB1B1" : "#DDD" }}
-              >
-                → {active.evaluation}
-              </div>
-            </div>
-          )}
 
           {/* Initial play overlay */}
           {!autoplay && !playing && current === 0 && (

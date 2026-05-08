@@ -1432,8 +1432,11 @@
     }
   },
   {
+    "player_id": "1d164a5f-b904-4af5-b869-02083bd9ca76",
+    "display_name": "George Paul",
     "video_url": "<UNKNOWN>",
     "stars": 2,
+    "created_at": "2026-05-08T22:47:42.262Z",
     "clip_metadata": {
       "duration_seconds": 11,
       "sport": "basketball",
@@ -1601,9 +1604,177 @@
       ],
       "one_thing_to_focus_on_next": "Work on creating more separation before pulling up. In the clip, your crossover got you into the shot but didn't fully clear the defender — the result was a block. The goal is to make the defender's feet move first, then use your pull-up as a true advantage shot, not a contested one.",
       "drill_recommendation": "Drill: 'Two-Dribble Pull-Up Series' — Start at the elbow, use a hard jab or shot-fake to shift the defender's weight, then take exactly two dribbles (one direction change) into your pull-up. Focus on the moment of separation — only shoot when you feel the defender's momentum going the wrong way. Do 10 reps from each elbow daily, tracking how many reps you get a clean release versus a contested one."
+    }
+  },
+  {
+    "video_url": "https://zeffv0opbkgwqug1.public.blob.vercel-storage.com/Screen%20Recording%202026-05-08%20at%202.31.29%E2%80%AFPM-rU7GpUKhYGBGklJdclT1do0BBJfcOS.mov",
+    "stars": 2,
+    "clip_metadata": {
+      "duration_seconds": 11.5,
+      "sport": "basketball",
+      "position": "SG"
     },
-    "player_id": "1d164a5f-b904-4af5-b869-02083bd9ca76",
-    "created_at": "2026-05-08T22:47:42.262Z",
-    "display_name": "George Paul"
+    "physical_observations": {
+      "estimated_height_band": "6'2\"–6'4\"",
+      "frame": "Athletic, lean guard build — insufficient clip length to assess full physical profile",
+      "athleticism_score": 6,
+      "lateral_quickness_score": 5,
+      "motor_score": 5,
+      "notes": "Only 11.5 seconds of footage across two offensive possessions. No defensive sequences, no transition, no off-ball action observed. Physical scores are conservative estimates based on extremely limited evidence."
+    },
+    "skill_evaluation": {
+      "perimeter_defense": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [
+          "No defensive footage present in the clip — cannot assess perimeter defense."
+        ],
+        "concerns": [
+          "Zero defensive possessions observed.",
+          "No closeout, ball pressure, or contest data available.",
+          "Cannot assign a meaningful score; 1 reflects absence of evidence, not confirmed weakness."
+        ]
+      },
+      "screen_navigation": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [
+          "No screen navigation footage present in the clip."
+        ],
+        "concerns": [
+          "No over/under reads or fight-through moments observed.",
+          "Clip contains only two offensive isolation possessions.",
+          "Score reflects absence of evidence only."
+        ]
+      },
+      "finishing": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [
+          "No finishing attempts at or near the rim observed in this clip."
+        ],
+        "concerns": [
+          "Both possessions end in pull-up jump shots, not finishing situations.",
+          "No contact tolerance or body control at the rim can be evaluated.",
+          "Score reflects absence of evidence only."
+        ]
+      },
+      "shot_creation": {
+        "score": 6,
+        "percentile_band": "average",
+        "evidence_timestamps": [
+          "00:00",
+          "00:04"
+        ],
+        "strengths": [
+          "Demonstrates a functional hesitation dribble at the top of the key to momentarily freeze the on-ball defender (00:00).",
+          "Shows ability to use a crossover to generate lateral separation against a live defender (00:04).",
+          "Willing to rise into a contested pull-up, suggesting some confidence in self-creation off the dribble."
+        ],
+        "concerns": [
+          "Sample size is only two possessions — shot outcomes are not confirmed in the timeline, making efficiency impossible to evaluate.",
+          "Both actions are isolation-heavy; no evidence of shot creation off movement, pin-downs, or DHOs.",
+          "Clip is too short to assess consistency, counter moves, or creation under sustained defensive pressure."
+        ]
+      },
+      "passing_iq": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [
+          "No passing decisions observed in this clip."
+        ],
+        "concerns": [
+          "Player chose to shoot on both possessions; no pass reads, skip passes, or advantage-extension moments visible.",
+          "Cannot evaluate read speed or processing.",
+          "Score reflects absence of evidence only."
+        ]
+      },
+      "off_ball_movement": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [
+          "No off-ball sequences present in the clip."
+        ],
+        "concerns": [
+          "Both timeline moments begin with the player already in possession of the ball.",
+          "No cutting, relocation, or screening intent observed.",
+          "Score reflects absence of evidence only."
+        ]
+      }
+    },
+    "tactical_intelligence": {
+      "decision_making_score": 5,
+      "off_ball_awareness_score": 1,
+      "communication_observed": false,
+      "notes": "Only two on-ball offensive possessions are available for review. The player reads the defender and selects an appropriate pull-up in both instances, suggesting baseline on-ball decision-making. However, no off-ball sequences, no transition reads, no communication, and no team-concept plays are visible. Tactical intelligence cannot be meaningfully graded from this sample."
+    },
+    "tagged_moments": [
+      {
+        "timestamp": "00:00",
+        "duration_seconds": 4,
+        "category": "shot_creation",
+        "factual_description": "Player receives pass at top of key, executes a hesitation dribble, and pulls up for a mid-range jump shot.",
+        "evaluation": "The hesitation dribble shows a basic level of on-ball deception, but a two-possession clip is insufficient to confirm this as a reliable weapon.",
+        "rating": "neutral",
+        "skill_tags": [
+          "shot_creation",
+          "ball_handling",
+          "pull_up_jumper"
+        ]
+      },
+      {
+        "timestamp": "00:04",
+        "duration_seconds": 7.5,
+        "category": "shot_creation",
+        "factual_description": "Slow-motion replay shows player using a crossover dribble against a defender to create separation before rising for a contested jump shot.",
+        "evaluation": "The crossover generates measurable lateral separation against a live defender, a positive indicator of shot creation skill, though slow-motion replay inflates the apparent quality of the move.",
+        "rating": "positive",
+        "skill_tags": [
+          "shot_creation",
+          "crossover",
+          "separation",
+          "contested_shot"
+        ]
+      }
+    ],
+    "recruiter_facing_descriptors": [
+      "On-ball shot creator",
+      "Pull-up threat off the dribble",
+      "Extremely limited film sample — full evaluation not possible",
+      "Isolation-capable guard",
+      "Needs multi-possession film to assess two-way value"
+    ],
+    "scouting_summary": {
+      "headline": "Guard shows flashes of on-ball creation in a severely under-sampled clip — full evaluation requires substantially more footage.",
+      "strengths": [
+        "Demonstrates a functional hesitation dribble to manipulate on-ball defenders.",
+        "Uses crossover dribble to generate lateral separation in isolation settings.",
+        "Willing to attack and rise into contested pull-up situations."
+      ],
+      "areas_for_growth": [
+        "No evidence of off-ball activity, cutting, or movement without the ball.",
+        "No defensive possessions present — two-way value is entirely unknown.",
+        "Shot creation toolkit appears limited to isolation actions; no creation off screens or movement observed."
+      ],
+      "projected_role": "Cannot project a role from 11.5 seconds of footage. Tentatively an on-ball guard if creation skills hold up in a larger sample.",
+      "comparable_archetype": "Isolation-first scoring guard — archetype comparison is speculative given the sample size.",
+      "honest_limitations": "This evaluation is based on exactly two offensive possessions totaling 11.5 seconds of footage. Five of six skill categories (perimeter defense, screen navigation, finishing, passing IQ, off-ball movement) have zero observable evidence and have been scored accordingly. Physical scores, tactical intelligence, and all recruiter-facing descriptors carry extremely low confidence. A full evaluation requires a minimum of one complete game or a curated 8–12 minute highlight reel with defensive and off-ball sequences included."
+    },
+    "athlete_facing_breakdown": {
+      "what_youre_doing_well": [
+        "Your hesitation dribble shows you understand how to use pace changes to freeze a defender before attacking.",
+        "Your crossover creates real separation — you're not just going through the motions, you're making the defender move."
+      ],
+      "one_thing_to_focus_on_next": "The film only shows you with the ball in your hands. Scouts need to see what you do WITHOUT the ball — your cuts, your relocations, and especially your defense. That's what separates prospects at the next level.",
+      "drill_recommendation": "Spend dedicated time on 'ghost cuts' and 'read-and-replace' off-ball drills. Film yourself making back-cuts and flare-cuts off a passer, then review the footage to check your timing and angles. Pair this with 1-on-1 closeout defense reps so you have defensive film to share with evaluators."
+    },
+    "player_id": "fc721e7f-8f4e-4855-8a5d-c2da5e8b80b0",
+    "created_at": "2026-05-08T23:22:23.330Z",
+    "display_name": "Kyrie Test"
   }
 ]
