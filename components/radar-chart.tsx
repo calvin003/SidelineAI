@@ -75,7 +75,7 @@ export function RadarChart({
     <svg
       width={size}
       height={size}
-      viewBox="0 0 200 200"
+      viewBox="-30 -10 260 220"
       role="img"
       aria-label="Performance radar"
     >

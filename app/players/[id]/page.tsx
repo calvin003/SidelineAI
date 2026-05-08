@@ -34,7 +34,15 @@ export default async function PlayerPage({
   const av = AV_SHADES[(name.charCodeAt(0) || 0) % AV_SHADES.length];
 
   const skillKeys = Object.keys(p.skill_evaluation) as SkillKey[];
-  const radarLabels = skillKeys.map((k) => SKILL_LABELS[k].split(" ")[0]);
+  const RADAR_SHORT: Record<SkillKey, string> = {
+    perimeter_defense: "Defense",
+    screen_navigation: "Screen Nav",
+    finishing: "Finish",
+    shot_creation: "Shot Create",
+    passing_iq: "Pass IQ",
+    off_ball_movement: "Off-Ball",
+  };
+  const radarLabels = skillKeys.map((k) => RADAR_SHORT[k]);
   const radarValues = skillKeys.map((k) => p.skill_evaluation[k].score / 10);
 
   const stats = skillKeys.map((k) => ({
@@ -151,7 +159,7 @@ export default async function PlayerPage({
             className="font-bold text-ink leading-tight"
             style={{ fontSize: "clamp(20px, 2.4vw, 28px)", letterSpacing: "-0.5px" }}
           >
-            “{p.scouting_summary.headline}”
+            &ldquo;{p.scouting_summary.headline}&rdquo;
           </p>
           <div className="flex gap-1.5 flex-wrap mt-3">
             {p.recruiter_facing_descriptors.map((d) => (
@@ -186,7 +194,7 @@ export default async function PlayerPage({
               <RadarChart
                 labels={radarLabels}
                 values={radarValues}
-                size={192}
+                size={280}
               />
             </div>
           </div>

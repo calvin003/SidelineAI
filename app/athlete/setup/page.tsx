@@ -130,6 +130,7 @@ export default function AthleteSetupPage() {
           videoUrl: blobUrl,
           position: form.position,
           displayName: `${form.first} ${form.last}`.trim(),
+          school: form.school.trim() || undefined,
           playerDescription: form.playerDescription.trim() || undefined,
         }),
       });

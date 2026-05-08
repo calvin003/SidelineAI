@@ -1607,8 +1607,11 @@
     }
   },
   {
+    "player_id": "fc721e7f-8f4e-4855-8a5d-c2da5e8b80b0",
+    "display_name": "Kyrie Test",
     "video_url": "https://zeffv0opbkgwqug1.public.blob.vercel-storage.com/Screen%20Recording%202026-05-08%20at%202.31.29%E2%80%AFPM-rU7GpUKhYGBGklJdclT1do0BBJfcOS.mov",
     "stars": 2,
+    "created_at": "2026-05-08T23:22:23.330Z",
     "clip_metadata": {
       "duration_seconds": 11.5,
       "sport": "basketball",
@@ -1772,9 +1775,176 @@
       ],
       "one_thing_to_focus_on_next": "The film only shows you with the ball in your hands. Scouts need to see what you do WITHOUT the ball — your cuts, your relocations, and especially your defense. That's what separates prospects at the next level.",
       "drill_recommendation": "Spend dedicated time on 'ghost cuts' and 'read-and-replace' off-ball drills. Film yourself making back-cuts and flare-cuts off a passer, then review the footage to check your timing and angles. Pair this with 1-on-1 closeout defense reps so you have defensive film to share with evaluators."
+    }
+  },
+  {
+    "video_url": "https://zeffv0opbkgwqug1.public.blob.vercel-storage.com/Screen%20Recording%202026-05-08%20at%202.31.29%E2%80%AFPM-4HwbrUtHd7Az9nSVBA91IyxQiyzLX2.mov",
+    "school": "Kyri Highschool",
+    "stars": 2,
+    "clip_metadata": {
+      "duration_seconds": 11.5,
+      "sport": "basketball",
+      "position": "SG"
     },
-    "player_id": "fc721e7f-8f4e-4855-8a5d-c2da5e8b80b0",
-    "created_at": "2026-05-08T23:22:23.330Z",
-    "display_name": "Kyrie Test"
+    "physical_observations": {
+      "estimated_height_band": "6'0\"–6'2\"",
+      "frame": "Lean, guard-built frame with good proportions for a shooting guard",
+      "athleticism_score": 7,
+      "lateral_quickness_score": 6,
+      "motor_score": 6,
+      "notes": "Only 11.5 seconds of footage available across two clips (one a replay). Physical assessment is severely limited. Athleticism inferred from hesitation and fadeaway mechanics; no defensive or transition reps observed."
+    },
+    "skill_evaluation": {
+      "perimeter_defense": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [],
+        "concerns": [
+          "Zero defensive possessions appear in the timeline; no closeout, ball-pressure, or contest reps to evaluate.",
+          "Cannot assign a meaningful score — any rating above floor would be fabricated.",
+          "Recruiter should request dedicated defensive film before drawing conclusions."
+        ]
+      },
+      "screen_navigation": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [],
+        "concerns": [
+          "No screen-navigation situations appear in the timeline.",
+          "Over/under reads and fight-through ability are completely unobserved.",
+          "Score reflects absence of evidence, not confirmed deficiency."
+        ]
+      },
+      "finishing": {
+        "score": 5,
+        "percentile_band": "average",
+        "evidence_timestamps": [
+          "00:00",
+          "00:04"
+        ],
+        "strengths": [
+          "Both clips show pull-up and fadeaway jump shots released cleanly over a defender, suggesting adequate body control in the air.",
+          "Ability to get a shot off against a high-level defender (Curry) indicates some contact tolerance and shot-release confidence."
+        ],
+        "concerns": [
+          "No rim-attack or contact finishing at the basket is visible; all finishing observed is perimeter-based pull-up work.",
+          "Sample size of two clips (one a replay of similar action) is insufficient to rate finishing comprehensively.",
+          "Cannot assess left-hand finishing, euro-step, or floater repertoire from this footage."
+        ]
+      },
+      "shot_creation": {
+        "score": 7,
+        "percentile_band": "top_25",
+        "evidence_timestamps": [
+          "00:00",
+          "00:04"
+        ],
+        "strengths": [
+          "Hesitation dribble at 00:00 generates measurable separation against an elite defender, demonstrating advanced change-of-pace feel.",
+          "Crossover at 00:04 shifts the defender's weight effectively before the fadeaway, showing two distinct creation tools in a short window.",
+          "Footwork into the pull-up and fadeaway appears controlled and repeatable, indicating practiced shot-creation mechanics."
+        ],
+        "concerns": [
+          "Only two possessions (one a replay angle of similar action) are available; shot diet and creation consistency over a full game are unknown.",
+          "Both creation moves are isolation-heavy; pick-and-roll shot creation and off-movement shooting are unobserved.",
+          "Defender identity (Stephen Curry) raises context questions — game situation and defensive intensity cannot be fully verified from clip alone."
+        ]
+      },
+      "passing_iq": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [],
+        "concerns": [
+          "No passing decisions appear in the timeline; read speed and advantage extension are completely unobserved.",
+          "Both possessions end in self-created shots with no pass options evaluated.",
+          "Score reflects absence of evidence, not confirmed deficiency."
+        ]
+      },
+      "off_ball_movement": {
+        "score": 1,
+        "percentile_band": "below_avg",
+        "evidence_timestamps": [],
+        "strengths": [],
+        "concerns": [
+          "Both clips begin with the player already in possession; no off-ball cutting, relocation, or screening is visible.",
+          "Cannot evaluate off-ball IQ, timing of cuts, or screening intent from this footage.",
+          "Score reflects absence of evidence, not confirmed deficiency."
+        ]
+      }
+    },
+    "tactical_intelligence": {
+      "decision_making_score": 6,
+      "off_ball_awareness_score": 1,
+      "communication_observed": false,
+      "notes": "Decision-making is inferred solely from two isolation possessions where the player chose to shoot rather than pass. Both decisions appear reasonable given the separation created, but no multi-option reads, help-side recognition, or off-ball awareness can be assessed. Communication is unobserved. The 11.5-second clip window is far too narrow for a reliable tactical intelligence rating."
+    },
+    "tagged_moments": [
+      {
+        "timestamp": "00:00",
+        "duration_seconds": 4,
+        "category": "shot_creation",
+        "factual_description": "Player receives pass on right wing, executes hesitation dribble, and pulls up for mid-range jump shot over defender.",
+        "evaluation": "The hesitation dribble generates genuine separation against a high-level defender, and the pull-up release is clean and controlled — a positive shot-creation rep.",
+        "rating": "positive",
+        "skill_tags": [
+          "shot_creation",
+          "hesitation_dribble",
+          "pull_up_jumper",
+          "separation"
+        ]
+      },
+      {
+        "timestamp": "00:04",
+        "duration_seconds": 7.5,
+        "category": "shot_creation",
+        "factual_description": "Replay angle shows player using crossover dribble to create separation and finishing with a fadeaway jump shot.",
+        "evaluation": "The crossover-to-fadeaway sequence demonstrates a second viable creation tool and solid footwork, though this is a replay of similar action rather than a new possession.",
+        "rating": "positive",
+        "skill_tags": [
+          "shot_creation",
+          "crossover",
+          "fadeaway",
+          "footwork",
+          "separation"
+        ]
+      }
+    ],
+    "recruiter_facing_descriptors": [
+      "Isolation shot creator",
+      "Advanced change-of-pace dribbler",
+      "Pull-up and fadeaway capable",
+      "Extremely limited film sample — full evaluation pending"
+    ],
+    "scouting_summary": {
+      "headline": "Shot-creation flashes in a critically undersized film sample — evaluation incomplete",
+      "strengths": [
+        "Demonstrates two distinct isolation creation tools (hesitation pull-up, crossover fadeaway) in the available footage.",
+        "Footwork and release mechanics on pull-up jumpers appear polished and repeatable.",
+        "Ability to generate separation against high-level competition is an encouraging early indicator."
+      ],
+      "areas_for_growth": [
+        "No defensive film whatsoever — perimeter defense, screen navigation, and help-side activity are completely unknown.",
+        "Passing IQ and off-ball movement are unobserved; unclear whether player can function within a team offensive system.",
+        "Shot diet appears isolation-heavy in the available clips; off-movement shooting and pick-and-roll integration need to be assessed."
+      ],
+      "projected_role": "Scoring guard / isolation creator — role projection is speculative given the 11.5-second sample",
+      "comparable_archetype": "Pull-up scoring guard who creates off the dribble; archetype comparison is premature without defensive and team-play footage",
+      "honest_limitations": "This evaluation is based on exactly two possessions (one of which is a replay angle of similar action) totaling 11.5 seconds. Four of six skill categories — perimeter defense, screen navigation, passing IQ, and off-ball movement — received floor scores exclusively because no evidence exists in the timeline, not because deficiencies were observed. Physical observations, tactical intelligence, and overall star rating are all speculative. A full game film sample is required before any recruiting decision should be influenced by this report."
+    },
+    "athlete_facing_breakdown": {
+      "what_youre_doing_well": [
+        "Your hesitation dribble is a genuine weapon — you shifted the defender's weight and created real space before the pull-up.",
+        "Your crossover-to-fadeaway shows you have more than one move; the footwork into the shot looks natural and practiced.",
+        "You're showing confidence releasing over a defender rather than forcing your way to the rim, which speaks to your shot-creation IQ."
+      ],
+      "one_thing_to_focus_on_next": "The film only shows you creating off isolation. The next step is proving you can make the right read when the defense collapses — find the open teammate, then get back to your own shot. Decision-making in advantage situations will separate you at the next level.",
+      "drill_recommendation": "3-Man Advantage Drill: Start in a 3-on-2 half-court set. You initiate off the dribble, read the defense, and must make at least two passes before shooting. This forces you to process multiple options before defaulting to your own shot, building the passing IQ and off-ball awareness that scouts will look for in your next evaluation."
+    },
+    "player_id": "796e1a5f-709c-41ec-b1ce-0b310c532391",
+    "created_at": "2026-05-08T23:38:16.097Z",
+    "display_name": "Kyrie Irving"
   }
 ]

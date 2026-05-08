@@ -10,8 +10,14 @@ export const maxDuration = 300;
 
 export async function POST(req: NextRequest) {
   try {
-    const { videoId, position, displayName, playerDescription, videoUrl } =
-      await req.json();
+    const {
+      videoId,
+      position,
+      displayName,
+      school,
+      playerDescription,
+      videoUrl,
+    } = await req.json();
     if (!videoId) {
       return NextResponse.json({ error: "videoId required" }, { status: 400 });
     }
@@ -28,6 +34,7 @@ export async function POST(req: NextRequest) {
     evaluation.player_id = randomUUID();
     evaluation.created_at = new Date().toISOString();
     if (displayName) evaluation.display_name = displayName;
+    if (school) evaluation.school = school;
     if (videoUrl) evaluation.video_url = videoUrl;
 
     await addPlayer(evaluation);
