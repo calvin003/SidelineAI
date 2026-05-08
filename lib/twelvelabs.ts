@@ -27,6 +27,22 @@ export async function uploadVideo(
   return { taskId: asset.id };
 }
 
+export async function uploadVideoFromUrl(
+  url: string,
+  filename: string,
+): Promise<{ taskId: string }> {
+  const client = ensure();
+  console.log(`[TL] uploading from url ${url}`);
+  const asset = await client.assets.create({
+    method: "url",
+    url,
+    filename,
+  });
+  if (!asset.id) throw new Error("Asset creation returned no id");
+  console.log(`[TL] asset created: ${asset.id} status=${asset.status}`);
+  return { taskId: asset.id };
+}
+
 export async function getIndexingStatus(
   assetId: string,
 ): Promise<{ status: "processing" | "ready" | "failed"; videoId?: string }> {

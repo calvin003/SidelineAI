@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { upload } from "@vercel/blob/client";
 
 type Position = "PG" | "SG" | "SF" | "PF" | "C";
 type Hand = "Right" | "Left" | "Both";
@@ -84,16 +85,21 @@ export default function AthleteSetupPage() {
     try {
       const file = form.files[0];
       if (!file) {
-        // No film — just create a "stub" player with no eval. For hackathon
-        // demo we require a video to keep the flow honest.
         throw new Error("Upload at least one clip to create a profile.");
       }
 
-      const fd = new FormData();
-      fd.append("video", file);
-      fd.append("position", form.position || "wing");
+      // Step 1: upload directly from the browser to Vercel Blob.
+      const blob = await upload(file.name, file, {
+        access: "public",
+        handleUploadUrl: "/api/upload-token",
+      });
 
-      const upRes = await fetch("/api/upload", { method: "POST", body: fd });
+      // Step 2: hand the URL to our API → TwelveLabs URL ingest.
+      const upRes = await fetch("/api/upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ videoUrl: blob.url, filename: file.name }),
+      });
       const upData = await upRes.json();
       if (!upRes.ok) throw new Error(upData.error ?? "upload failed");
 

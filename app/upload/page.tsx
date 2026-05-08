@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { upload } from "@vercel/blob/client";
 
 type Stage =
   | { kind: "form" }
@@ -68,10 +69,15 @@ export default function UploadPage() {
     if (!file) return;
     setStage({ kind: "uploading" });
     try {
-      const fd = new FormData();
-      fd.append("video", file);
-      fd.append("position", position);
-      const r = await fetch("/api/upload", { method: "POST", body: fd });
+      const blob = await upload(file.name, file, {
+        access: "public",
+        handleUploadUrl: "/api/upload-token",
+      });
+      const r = await fetch("/api/upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ videoUrl: blob.url, filename: file.name }),
+      });
       const d = await r.json();
       if (!r.ok) throw new Error(d.error ?? "upload failed");
       setStage({ kind: "indexing", taskId: d.taskId });
