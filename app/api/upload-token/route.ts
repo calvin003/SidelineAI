@@ -12,6 +12,7 @@ export async function POST(request: NextRequest) {
       onBeforeGenerateToken: async () => ({
         allowedContentTypes: ["video/mp4", "video/quicktime"],
         maximumSizeInBytes: 500 * 1024 * 1024,
+        addRandomSuffix: true,
       }),
       onUploadCompleted: async ({ blob }) => {
         console.log(`[BLOB] uploaded ${blob.url} (${blob.pathname})`);
